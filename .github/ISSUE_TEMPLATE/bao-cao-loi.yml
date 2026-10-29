@@ -1,0 +1,60 @@
+name: Báo cáo lỗi
+description: Ghi nhận một lỗi phát hiện khi kiểm thử ShipFee
+labels: ["bug"]
+body:
+  - type: input
+    id: ma-ca
+    attributes:
+      label: Mã ca kiểm thử / mã yêu cầu
+      placeholder: "TC015 / R05"
+    validations:
+      required: true
+  - type: textarea
+    id: moi-truong
+    attributes:
+      label: Môi trường
+      placeholder: "Windows 11, Python 3.12, Chrome 130, commit abc123"
+    validations:
+      required: true
+  - type: textarea
+    id: buoc
+    attributes:
+      label: Bước tái hiện
+      placeholder: "1. ...\n2. ...\n3. ..."
+    validations:
+      required: true
+  - type: textarea
+    id: mong-doi
+    attributes:
+      label: Kết quả mong đợi (theo đặc tả)
+    validations:
+      required: true
+  - type: textarea
+    id: thuc-te
+    attributes:
+      label: Kết quả thực tế
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Mức nghiêm trọng (severity)
+      options: [Critical, High, Medium, Low]
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Độ ưu tiên (priority)
+      options: [P1, P2, P3]
+    validations:
+      required: true
+  - type: dropdown
+    id: tan-suat
+    attributes:
+      label: Tần suất
+      options: [Luôn xảy ra, Thỉnh thoảng, Một lần]
+  - type: textarea
+    id: minh-chung
+    attributes:
+      label: Ảnh / video minh chứng
